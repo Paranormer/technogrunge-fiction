@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Technogrunge Fiction</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=IBM+Plex+Mono:wght@300;500&display=swap" rel="stylesheet">
+
+  <!-- External styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="page">
+  <header>
+    <div class="brand">
+      <div class="brand-mark"></div>
+      <div class="brand-text">
+        <h1 class="editable" data-key="site-title" data-placeholder="Site title (e.g. Technogrunge Fiction)"></h1>
+        <span class="editable" data-key="site-strapline" data-placeholder="Short strapline / vibe"></span>
+      </div>
+    </div>
+
+    <nav>
+      <button class="nav-link" onclick="scrollToSection('blog')">Blog</button>
+      <button class="nav-link" onclick="scrollToSection('archive')">Archive</button>
+      <button class="nav-link" onclick="scrollToSection('about')">About</button>
+      <button class="nav-link primary" onclick="scrollToSection('contact')">Contact</button>
+      <button class="edit-toggle" id="editToggle" type="button">
+        <span>✎</span> Edit mode
+      </button>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="top">
+    <div class="hero-main">
+      <div class="hero-kicker">// writer.log</div>
+
+      <h2 class="hero-title editable" data-key="hero-title" data-placeholder="Main hero title (e.g. Fiction for broken cities…)"></h2>
+      <p class="hero-subtitle editable" data-key="hero-subtitle" data-placeholder="Hero subtitle / description of your technogrunge world"></p>
+
+      <div class="hero-meta">
+        <div class="chip">
+          <span class="chip-dot"></span>
+          <span class="editable" data-key="chip-1" data-placeholder="Tag 1 (e.g. Serials)"></span>
+        </div>
+        <div class="chip">
+          <span class="chip-dot"></span>
+          <span class="editable" data-key="chip-2" data-placeholder="Tag 2 (e.g. Shorts)"></span>
+        </div>
+        <div class="chip">
+          <span class="chip-dot"></span>
+          <span class="editable" data-key="chip-3" data-placeholder="Tag 3 (e.g. Drafts)"></span>
+        </div>
+      </div>
+
+      <div class="hero-actions">
+        <button class="btn primary" type="button" onclick="scrollToSection('blog')">
+          <span class="btn-icon">▶</span>
+          Latest entry
+        </button>
+        <button class="btn secondary" type="button" onclick="scrollToSection('archive')">
+          <span class="btn-icon">⟲</span>
+          Dive into the archive
+        </button>
+      </div>
+    </div>
+
+    <aside class="hero-side">
+      <div class="panel">
+        <div class="panel-header">
+          <span>Now playing</span>
+          <span>serial // 001</span>
+        </div>
+        <div class="panel-body editable" data-key="now-playing" data-placeholder="Describe your current main project here"></div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-header">
+          <span>System stats</span>
+          <span>updated manually</span>
+        </div>
+        <ul class="panel-list">
+          <li>
+            <span>Pieces online</span>
+            <span class="editable" data-key="stat-pieces" data-placeholder="0"></span>
+          </li>
+          <li>
+            <span>Novels in progress</span>
+            <span class="editable" data-key="stat-novels" data-placeholder="0"></span>
+          </li>
+          <li>
+            <span>Scrapped drafts</span>
+            <span class="editable" data-key="stat-drafts" data-placeholder="∞"></span>
+          </li>
+          <li>
+            <span>Theme</span>
+            <span class="panel-tag editable" data-key="stat-theme" data-placeholder="Technogrunge"></span>
+          </li>
+        </ul>
+      </div>
+    </aside>
+  </section>
+
+  <!-- BLOG -->
+  <section id="blog">
+    <div class="section-header">
+      <h3 class="section-title">Blog.log</h3>
+      <div class="section-meta editable" data-key="blog-meta" data-placeholder="Explain what lives in your blog section"></div>
+    </div>
+
+    <div class="blog-list">
+      <article class="post-card">
+        <div class="editable" data-key="blog-left" data-placeholder="Add your first blog entry here (you can use headings, paragraphs, links)…"></div>
+      </article>
+
+      <article class="post-card">
+        <div class="editable" data-key="blog-right" data-placeholder="Add a second blog entry, playlist, process note, etc. here…"></div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ARCHIVE -->
+  <section id="archive">
+    <div class="section-header">
+      <h3 class="section-title">Archive.sys</h3>
+      <div class="section-meta editable" data-key="archive-meta" data-placeholder="Describe what’s in your archive: novels, novellas, stories…"></div>
+    </div>
+
+    <div class="archive-grid">
+      <article class="archive-item">
+        <div class="archive-label editable" data-key="archive-1-label" data-placeholder="Type (e.g. Novel // 001)"></div>
+        <h4 class="archive-title editable" data-key="archive-1-title" data-placeholder="Title of work"></h4>
+        <div class="archive-meta editable" data-key="archive-1-meta" data-placeholder="Word count, status, genre…"></div>
+        <p class="archive-description editable" data-key="archive-1-desc" data-placeholder="Short description / pitch"></p>
+        <p class="archive-status editable" data-key="archive-1-status" data-placeholder="Links to read/download, or status notes"></p>
+      </article>
+
+      <article class="archive-item">
+        <div class="archive-label editable" data-key="archive-2-label" data-placeholder="Type (e.g. Novella // 002)"></div>
+        <h4 class="archive-title editable" data-key="archive-2-title" data-placeholder="Title of work"></h4>
+        <div class="archive-meta editable" data-key="archive-2-meta" data-placeholder="Word count, status, series info…"></div>
+        <p class="archive-description editable" data-key="archive-2-desc" data-placeholder="Short description / pitch"></p>
+        <p class="archive-status editable" data-key="archive-2-status" data-placeholder="Links or status"></p>
+      </article>
+
+      <article class="archive-item">
+        <div class="archive-label editable" data-key="archive-3-label" data-placeholder="Type (e.g. Short story // 010)"></div>
+        <h4 class="archive-title editable" data-key="archive-3-title" data-placeholder="Title of work"></h4>
+        <div class="archive-meta editable" data-key="archive-3-meta" data-placeholder="Word count, published where, etc."></div>
+        <p class="archive-description editable" data-key="archive-3-desc" data-placeholder="Short description / pitch"></p>
+        <p class="archive-status editable" data-key="archive-3-status" data-placeholder="Link to publication / coming soon"></p>
+      </article>
+
+      <article class="archive-item">
+        <div class="archive-label editable" data-key="archive-4-label" data-placeholder="Type (e.g. Shorts bundle)"></div>
+        <h4 class="archive-title editable" data-key="archive-4-title" data-placeholder="Title of collection"></h4>
+        <div class="archive-meta editable" data-key="archive-4-meta" data-placeholder="Format, in progress/completed…"></div>
+        <p class="archive-description editable" data-key="archive-4-desc" data-placeholder="Short description"></p>
+        <p class="archive-status editable" data-key="archive-4-status" data-placeholder="Status or link"></p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="section-header">
+      <h3 class="section-title">About.txt</h3>
+      <div class="section-meta">Who’s behind the keyboard?</div>
+    </div>
+
+    <div class="about-layout">
+      <div class="about-text editable" data-key="about-text" data-placeholder="Write your bio here: what you write, what technogrunge means to you, etc."></div>
+
+      <aside class="about-highlight">
+        <div class="editable" data-key="about-highlight" data-placeholder="Access / content notes, how to request different formats, etc."></div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="section-header">
+      <h3 class="section-title">Contact.ping</h3>
+      <div class="section-meta editable" data-key="contact-meta" data-placeholder="What people can contact you about"></div>
+    </div>
+
+    <div class="about-layout">
+      <div class="about-text editable" data-key="contact-main" data-placeholder="Add your email / socials / contact preferences here (remember: this is public)."></div>
+
+      <div class="about-highlight">
+        <div class="editable" data-key="contact-side" data-placeholder="Notes about newsletters, RSS, update cadence…"></div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div>© <span id="year"></span> <span class="editable" data-key="footer-name" data-placeholder="Your name"></span>. All words &amp; worlds reserved.</div>
+    <div class="footer-links">
+      <span>Theme: technogrunge v1.0</span>
+      <a href="#top">Back to top ⮝</a>
+    </div>
+  </footer>
+</div>
+
+<!-- External script -->
+<script src="script.js"></script>
+</body>
+</html>
